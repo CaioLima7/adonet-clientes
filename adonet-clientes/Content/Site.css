@@ -1,5 +1,5 @@
 ﻿body {
-    padding-top: 50px;
+    padding-top: 15px;
     padding-bottom: 20px;
 }
 
@@ -20,5 +20,11 @@
 input,
 select,
 textarea {
-    max-width: 280px;
+    /*max-width: 280px;*/
+}
+
+.footer {
+    margin-top: 15%;
+    background-color: rgba(128, 128, 128, 0.7 );
+    padding: 2%;
 }

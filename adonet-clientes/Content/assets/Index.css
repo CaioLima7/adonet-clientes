@@ -1,0 +1,37 @@
+﻿body {
+    margin-top: 4%;
+    font-size: 20px;
+}
+
+div{
+    width: 100%;
+}
+
+#CadastroCliente {
+    margin-top: 12%;
+    text-decoration: none;
+    color: white;
+}
+
+#sair{
+    margin-top: 1%;
+}
+
+#sair, #CadastroCliente {
+    width: 20%;
+    margin-left: 40%;
+    margin-right: 40%
+}
+
+footer {
+    margin-top: 20%;
+    font-size: 15px;
+}
+
+.login {
+    margin-top: 6%;
+    width: 20%;
+    margin-left: 40%;
+    margin-right: 40%
+}
+

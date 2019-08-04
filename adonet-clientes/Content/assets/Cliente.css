@@ -1,0 +1,82 @@
+﻿.cadastro{
+    border: 4px solid black;
+    /*overflow: auto;*/
+    padding-bottom: 40px;
+}
+
+.conteudo {
+    padding: 4%;
+}
+
+input{
+    height: 40px;
+    padding-left: 2%;
+    margin-top: 2%;
+}
+
+button{
+    margin-top: 4%;
+}
+.preencher {
+    width: 100%;
+    box-sizing: border-box;
+    float: left;
+}
+
+.divisao2 input {
+    width: 48%; 
+    box-sizing: border-box;
+    float: left;
+}
+
+.divisao3 input {
+    width: 31%;
+    float: left;
+}
+
+.divisao4 input {
+    width: 20%;
+    float: left;
+    box-sizing: border-box;
+}
+
+.divisao4 button {
+}
+
+#rg, #telefone  {
+    margin-left: 4%;
+}
+
+#complemento, #cep, #estado, #cidade {
+    margin-left: 3.5%;
+}
+.coluna {
+    float: left;
+    width: 25%;
+    border: 2px solid black;
+    padding-right: 4%;
+    overflow: hidden;
+}
+
+.row:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+.modal-content {
+    font-size: 13px;
+}
+.modal-content h2{
+    25px;
+}
+
+
+.botoes button{
+    width: 13%;
+    margin-left: 2%;
+}
+
+.input-append .btn.dropdown-toggle {
+    float: none;
+}
+

@@ -1,0 +1,149 @@
+﻿<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.mask/1.14.10/jquery.mask.js"></script>
+<script src="~/Scripts/cidades-estados-1.4-utf8.js"></script>
+<script src="https://unpkg.com/imask"></script>
+
+
+
+<h2>Cadastro</h2>
+
+<div class="cadastro conteudo">
+    <form id="formulario">
+        <input name="" id="nome" placeholder="Nome" disabled class="form-control preencher" maxlength="50">
+        <div class="divisao2">
+            <input name="" id="cpf" placeholder="Cpf" disabled class="form-control cpf">
+            <input name="" id="rg" placeholder="Rg" disabled class="form-control rg">
+        </div>
+        <div class="divisao2">
+            <input name="" id="date-mask" placeholder="Nascimento" disabled class="form-control data date-mask ">
+            <input name="" id="telefone" placeholder="Telefone" disabled class="form-control tel">
+        </div>
+
+        <input name="" id="logradouro" placeholder="Logradouro" disabled class="form-control preencher" maxlength="50">
+        <div class="divisao3">
+            <input name="" id="numero" placeholder="Número" disabled class="form-control" maxlength="4">
+            <input name="" id="complemento" placeholder="Complemento" disabled class="form-control" maxlength="15">
+            <input name="" id="cep" placeholder="Cep" disabled class="form-control cep" maxlength="30">
+        </div>
+        <div class="divisao3">
+            <input name="" id="bairro" placeholder="Bairro" disabled class="form-control" maxlength="30">
+
+
+
+            <input name="" id="estado" placeholder="Estado" disabled class="form-control" maxlength="2">
+            <input name="" id="cidade" placeholder="Cidade" disabled class="form-control" maxlength="30">
+
+            @*<div class="input-append btn-group">
+                    <input class="span2" id="appendedInputButton" size="16" type="text">
+                    <a class="btn btn-primary dropdown-toggle" data-toggle="dropdown" href="#">
+                        <span class="caret"></span>
+                    </a>
+                    <ul class="dropdown-menu">
+                        <li><a href="#"><i class="icon-pencil"></i> Edit</a></li>
+                        <li><a href="#"><i class="icon-trash"></i> Delete</a></li>
+                        <li><a href="#"><i class="icon-ban-circle"></i> Ban</a></li>
+                        <li class="divider"></li>
+                        <li><a href="#"><i class="i"></i> Make admin</a></li>
+                    </ul>
+                </div>*@
+
+        </div>
+    </form>
+
+    <div class="botoes">
+        <button type="button" id="pesquisar" class="btn btn-success btn-lg" data-toggle="modal" data-target="#myModal">Pesquisar</button>
+        <button type="button" class="btn btn-success btn-lg" onclick="alterarCliente()">Alterar</button>
+        <button type="button" class="btn btn-success btn-lg" onclick="deletarCliente()">Excluir</button>
+
+        <button type="button" class="btn btn-success btn-lg" onclick="voltar()" style="margin-left: 40%;">Sair</button>
+
+        <br />
+        <button type="button" class="btn btn-success btn-lg" onclick="incluir()">Incluir</button>
+        <button type="button" class="btn btn-success btn-lg" onclick="salvarCliente()">Salvar</button>
+        <button type="button" class="btn btn-success btn-lg" onclick="cancelar()">Cancelar</button>
+
+    </div>
+
+</div>
+
+<div class="container">
+    <!-- Modal -->
+    <div class="modal fade" id="myModal" role="dialog">
+        <div class="modal-dialog">
+
+            <!-- Modal content-->
+            <div class="modal-content">
+
+                <div class="cadastro conteudo">
+                    <div class="modal-header">
+                        <button type="button" class="close" data-dismiss="modal">&times;</button>
+                        <h2 class="modal-title">Clientes</h2>
+                    </div>
+
+                    <table id='minhaTabela'>
+                        <thead>
+                            <tr>
+                                <th>ID</th>
+                                <th>Nome</th>
+                                <th>CPF</th>
+                                <th>Data Nascimento</th>
+                            <tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td id="id1"></td>
+                                <td id="nome1"></td>
+                                <td class="cpf" id="cpf1"></td>
+                                <td id="dtNasc1"></td>
+                            </tr>
+                            <tr>
+                                <td id="id2"></td>
+                                <td id="nome2"></td>
+                                <td id="cpf2"></td>
+                                <td id="dtNasc2"></td>
+                            </tr>
+                            <tr>
+                                <td id="id3"></td>
+                                <td id="nome3"></td>
+                                <td id="cpf3"></td>
+                                <td id="dtNasc3"></td>
+                            </tr>
+                            <tr>
+                                <td id="id4"></td>
+                                <td id="nome4"></td>
+                                <td id="cpf4"></td>
+                                <td id="dtNasc4"></td>
+                            </tr>
+                            <tr>
+                                <td id="id5"></td>
+                                <td id="nome5"></td>
+                                <td id="cpf5"></td>
+                                <td id="dtNasc5"></td>
+                            </tr>
+                            <tr>
+                                <td id="id6"></td>
+                                <td id="nome6"></td>
+                                <td id="cpf6"></td>
+                                <td id="dtNasc6"></td>
+                            </tr>
+                        </tbody>
+                    </table>
+
+                    <p hidden id="valorId"></p>
+
+                    <button type="button" class="btn btn-success btn-lg" id="visualizarDados">Abrir</button>
+                    @*<button type="button" class="btn btn-success btn-lg" onclick="voltar()">Sair</button>*@
+                </div>
+
+            </div>
+
+        </div>
+    </div>
+</div>
+
+
+<link href="~/Content/assets/Cliente.css" rel="stylesheet" />
+<script src="~/Scripts/Interno/Chamadas.js"></script>
+<script src="~/Scripts/Interno/Utilidades.js"></script>
+<link href="~/Content/assets/LayoutModel.css" rel="stylesheet" />
+<script src="~/Scripts/Interno/Selecionar.js"></script>
+<link href="~/Content/assets/Selecionar.css" rel="stylesheet" />
