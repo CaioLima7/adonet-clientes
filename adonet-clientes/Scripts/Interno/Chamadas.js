@@ -1,5 +1,4 @@
 ﻿function buscarDadosCliente() {
-    debugger;
     var valorId = $("#valorId").text();
     $.ajax({
         method: "POST",
@@ -23,7 +22,6 @@
 }
 
 function salvarCliente() {
-    debugger;
     var nome = $('#nome').val();
     var cpf = $('#cpf').val().split(".").join("").replace("-", "")
     var rg = $('#rg').val().split(".").join("").replace("-", "");
@@ -47,10 +45,10 @@ function salvarCliente() {
             bairro: bairro, estado: estado, cidade: cidade,
         },
         error: function (data) {
-            console.log("Falhou!");
+            alert("Falhou!");
         },
         success: function (data) {
-            console.log("Sucesso!");
+            alert("Sucesso!");
         }
     });
 }

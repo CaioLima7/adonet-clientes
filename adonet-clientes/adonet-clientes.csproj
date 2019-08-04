@@ -200,7 +200,6 @@
     <None Include="Scripts\jquery-3.3.1.intellisense.js" />
     <Content Include="Scripts\cidades-estados-1.4-utf8.js" />
     <Content Include="Scripts\Interno\Chamadas.js" />
-    <Content Include="Scripts\Interno\Index.js" />
     <Content Include="Scripts\Interno\Selecionar.js" />
     <Content Include="Scripts\Interno\Utilidades.js" />
     <Content Include="Scripts\jquery-3.3.1.js" />
